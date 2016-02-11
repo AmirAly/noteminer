@@ -1,0 +1,11 @@
+{
+  "name": "DSA-API",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "*",
+    "express": "*",
+    "mongoose": "*",
+	"nodemailer":"*",
+	"node-schedule":"*"
+  }
+}
