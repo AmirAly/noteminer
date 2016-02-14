@@ -10,16 +10,38 @@
         </div>
         <div class="view-container  has-header">
             <div class="row">
-                <div class="col-10 responsive-sm responsive-md">
+                <div ng-hide="showMenu" class="col-10 responsive-sm responsive-md">
                     <!--empty area to keep the menu space-->
                 </div>
                 <div class="col padding">
-                    <h1>Recent Notes</h1>
-                    <hr />
+                    <h1 class="pageHeader">Recent Notes</h1>
+
                     <div class="row responsive-md responsive-sm text-center">
-                        <div class="col">.col</div>
-                        <div class="col">.col</div>
-                        <div class="col">.col</div>
+                        <div class="col-25">
+                            <div class="dvNotesData">
+                                <div><img src="images/unknown.png" /></div>
+                                <div class="dvNoteName"><span>Note 1</span></div>
+                            </div>
+                        </div>
+                        <div class="col-25">
+                            <div class="dvNotesData">
+                                <div><img src="images/logo.png" /></div>
+                                <div class="dvNoteName"><span>My Note About Note template 1</span></div>
+                            </div>
+                        </div>
+                        <div class="col-25">
+                            <div class="dvNotesData">
+                                <div><img src="images/backround.png" /></div>
+                                <div class="dvNoteName"><span>My Note About Note template 2</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-75"></div>
+                        <div class="col-25">
+                        <h3 class="text-center">View All</h3>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
