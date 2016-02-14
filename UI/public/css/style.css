@@ -1,0 +1,105 @@
+/*@font-face {
+    font-family: 'Droid Arabic Kufi';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../fonts/DroidKufi-Regular.woff) format('woff');
+}*/
+
+
+/*general*/
+
+ion-scroll[direction=y] {
+    /*height: calc(100vh - 33px - 33px  - 15px);*/
+    height: 100vh;
+}
+
+/*target firefox only*/
+@-moz-document url-prefix() {
+    ion-scroll[direction=y] {
+        overflow-y: scroll !important;
+    }
+}
+
+
+.text-left {
+    text-align: left !important;
+}
+
+.sideMenu {
+    background-color: #369;
+    color: #fff;
+    height: 100vh;
+}
+
+.adjustSideMenu {
+    position: absolute;
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #369;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    color: #fff;
+}
+
+
+ion-nav-bar.bar-stable.nav-bar-container {
+    visibility: hidden;
+}
+
+.scroll-view {
+    margin-top: 0;
+}
+
+.scroll-content {
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.hrDivider {
+    height: 3px;
+    background-color: #fff;
+    border: 0;
+}
+
+/*login page*/
+
+.loginPage .loginBackground {
+    background: url(../images/backround.png) no-repeat center;
+}
+
+.loginPage .loginfooter {
+    background-color: #6d8687;
+    color: #fff;
+    font-size: 18px;
+}
+
+.loginPage .colordDv {
+    /*background-color: #153d58;
+    opacity: 0.9;*/
+    height: 100vh;
+    padding: 3%;
+    padding-top: 8%;
+}
+
+    .loginPage .colordDv h1,
+    .loginPage .colordDv h2,
+    .loginPage .colordDv h3,
+    .loginPage .colordDv h4,
+    .loginPage .colordDv h5,
+    .loginPage .colordDv h6 {
+        color: #fff;
+    }
+
+@media (max-width: 767px) {
+    .loginPage .loginBackground {
+        background: url(../images/backround2.png) no-repeat center;
+    }
+
+    .loginPage .colordDv {
+        background-color: #153d58;
+        opacity: 0.9;
+    }
+}

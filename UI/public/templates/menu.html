@@ -1,0 +1,48 @@
+﻿<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-stable">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left">
+        <!--<ion-header-bar class="bar-stable">
+            <h1 class="title">Left</h1>
+        </ion-header-bar>-->
+        <ion-content>
+            <div class="sideMenu">
+                <div class="padding row row-center">
+                    <div class="col">
+                        <span class="h3">Amir Aly</span>
+                    </div>
+                    <div class="col text-right">
+                        <button class="button button-icon icon ion-drag light" ng-click="toggleLeftSideMenu()"></button>
+                    </div>
+
+                </div>
+                <hr class="hrDivider" />
+                <div class="padding">
+                    <button menu-close class="button button-icon icon ion-plus-round button-block light"><span class="h3 padding">&nbsp;New Map</span></button>
+                </div>
+            </div>
+            <!--<ion-list>
+                <ion-item menu-close ng-click="login()">
+                    Login
+                </ion-item>
+                <ion-item menu-close href="#/app/search">
+                    Search
+                </ion-item>
+                <ion-item menu-close href="#/app/browse">
+                    Browse
+                </ion-item>
+                <ion-item menu-close href="#/app/playlists">
+                    Playlists
+                </ion-item>
+            </ion-list>-->
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>
