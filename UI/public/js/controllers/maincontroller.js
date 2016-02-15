@@ -16,4 +16,8 @@
                        $scope.showMenu = false;
                    }
                });
+
+    $scope.newMap = function () {
+        $state.go('app.newnote');
+    }
 });

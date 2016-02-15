@@ -26,7 +26,7 @@ ion-scroll[direction=y] {
 }
 
 .sideMenu {
-    background-color: #369;
+    background-color: #116392;
     color: #fff;
     height: 100vh;
 }
@@ -34,10 +34,11 @@ ion-scroll[direction=y] {
 .adjustSideMenu {
     position: absolute;
     display: block;
+    z-index: 99999;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #369;
+    color: #116392;
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -65,38 +66,71 @@ ion-nav-bar.bar-stable.nav-bar-container {
 }
 
 
-.pageHeader{
-        position: relative;
-    padding-bottom: 10px;
+.pageHeader {
+    position: relative;
+    padding-bottom: 0;
     margin: 20px 0;
-    border-bottom: 2px solid #369;
+    border-bottom: 2px solid #116392;
 }
 
-.pageHeader:before{
+    .pageHeader:before {
         content: "";
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    background-color: #369;
-}
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background-color: #116392;
+    }
 
-.pageHeader:after{
+    .pageHeader:after {
         content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 0;
-    border-bottom: 2px solid #369;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 0;
+        border-bottom: 2px solid #116392;
+    }
+
+
+.clear {
+    float: left;
+    width: 100%;
+    height: 30px;
 }
 
+.clear2 {
+    float: left;
+    width: 100%;
+    height: 15px;
+}
 
+.clear3 {
+    float: left;
+    width: 100%;
+    height: 5px;
+}
+
+.cursorPointer {
+    cursor: pointer;
+}
+
+.loading-container .loading {
+    background-color: #fff !important;
+}
+
+    .loading-container .loading h3 {
+        color: #116392 !important;
+    }
+
+.button:hover {
+    color: #fff !important;
+}
 /*login page*/
 
 .loginPage .loginBackground {
-    background: url(../images/backround.png) no-repeat center;
+    background: url(../images/background.png) no-repeat center;
 }
 
 .loginPage .loginfooter {
@@ -105,9 +139,17 @@ ion-nav-bar.bar-stable.nav-bar-container {
     font-size: 18px;
 }
 
+    .loginPage .loginfooter a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+        .loginPage .loginfooter a:active {
+            color: #fff;
+            text-decoration: none;
+        }
+
 .loginPage .colordDv {
-    /*background-color: #153d58;
-    opacity: 0.9;*/
     height: 100vh;
     padding: 3%;
     padding-top: 8%;
@@ -124,42 +166,84 @@ ion-nav-bar.bar-stable.nav-bar-container {
 
 @media (max-width: 767px) {
     .loginPage .loginBackground {
-        background: url(../images/backround2.png) no-repeat center;
+        background: url(../images/background2.png) no-repeat center;
     }
 
-    .loginPage .colordDv {
-        background-color: #153d58;
-        opacity: 0.9;
+    .dvOffset50 {
+        display: none !important;
     }
 }
 
-/*recent notes*/
- .dvNotesData {
-    padding: 2px;
-    text-align: center;
-    height: 115px;
-    max-height: 115px;
+/*recent notes & all notes*/
+.dvNotesData {
+    height: 150px;
+    max-height: 150px;
     width: auto !important;
-    max-width: 100px;
+    max-width: 150px;
 }
 
- .dvNotesData img {
-    height: 85px;
-    max-height: 85px;
-    padding: 2px;
-    border: 2px solid #ccc;
-    text-align: center;
-    width: auto !important;
-    max-width: 100px;
-}
+    .dvNotesData img {
+        height: 120px;
+        max-height: 120px;
+        border: 2px solid #bcb7b7;
+    }
 
 .dvNoteName {
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 16px;
+    color: #5e5f5f;
+    text-align: left;
     white-space: nowrap;
     overflow: hidden !important;
     text-overflow: ellipsis;
-    color: #777;
-    text-align: left;
-    padding-left: 9%;
+}
+
+.dvNoteImg {
+    border: 2px solid #bcb7b7;
+    height: 120px !important;
+}
+
+.dvNotesGallary {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.adjustGallaryItem {
+    margin-bottom: 3%;
+}
+
+
+.txtSearch {
+    font-size: 18px !important;
+}
+
+/*note*/
+.button-float {
+    background: #1aa3db !important;
+    color: #206d55 !important;
+    z-index: 12 !important;
+    bottom: 10px !important;
+    border-radius: 50% !important;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26) !important;
+    -webkit-transform: translate3d(0, 0, 0) !important;
+    transform: translate3d(0, 0, 0) !important;
+    -webkit-transition: 0.2s linear !important;
+    transition: 0.2s linear !important;
+    -webkit-transition-property: -webkit-transform, all !important;
+    transition-property: transform, all !important;
+}
+
+    .button-float:hover {
+        -webkit-transform: translate3d(0, -1px, 0) !important;
+        transform: translate3d(0, -1px, 0) !important;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4) !important;
+        background: darken(#1aa3db, 10%) !important;
+    }
+
+.dvButtons {
+    position: absolute;
+    bottom: 0;
+}
+
+.btnSearch {
+    background: #1aa3db !important;
 }

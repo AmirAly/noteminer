@@ -14,12 +14,21 @@
                     <!--empty area to keep the menu space-->
                 </div>
                 <div class="col padding">
-                    <div class="pageHeader row row-bottom">
-                        <div class="col">
-                            <h1>Recent</h1>
+                    <div class="pageHeader padding-horizontal row row-bottom">
+                        <div class="col-25">
+                            <h1>All</h1>
+                        </div>
+
+                        <div class="col-75 padding-horizontal">
+                            <form ng-submit="search()">
+                                <label class="item-input padding-horizontal">
+                                    <input type="text" class="text-right txtSearch" placeholder="Type to filter">
+                                </label>
+                            </form>
+                            
                         </div>
                     </div>
-                    
+
                     <div class="row text-center row-baseline">
                         <div class="col col-25">
                             <div class=" text-center">
@@ -50,48 +59,9 @@
                         </div>
 
                     </div>
-
-                    <!--<div class="row responsive-sm text-center dvNotesGallary">
-
-                        <div class="col col-25 padding-vertical adjustGallaryItem">
-                            <div class="dvNotesData padding-vertical text-center">
-                                <div><img src="images/map1.png" class="padding full-image" /></div>
-                                <div class="dvNoteName padding-left">
-                                    <span class="padding-left">Note 1</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col col-25 padding-vertical adjustGallaryItem">
-                            <div class="dvNotesData padding-vertical text-center">
-                                <div><img src="images/map2.png" class="padding full-image" /></div>
-                                <div class="dvNoteName padding-left">
-                                    <span class="padding-left">My Note About Note template 1</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col col-25 padding-vertical adjustGallaryItem">
-                            <div class="dvNotesData padding-vertical text-center">
-                                <div><img src="images/map3.png" class="padding full-image" /></div>
-                                <div class="dvNoteName padding-left">
-                                    <span class="padding-left">My Note About Note template 2</span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>-->
-
-
                     <div class="clear"></div>
-                    <div class="row responsive-md responsive-sm">
-                        <div class="col-66"></div>
-                        <div class="col-33">
-                            <h3 class="text-center cursorPointer" ng-click="allMaps()">View All</h3>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </ion-scroll>
 </ion-content>
-
-

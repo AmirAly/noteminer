@@ -2,11 +2,10 @@ var noteMiner = angular.module("noteMiner", ['ionic']).run(function ($templateCa
 
     $http.get('templates/login.html', { cache: $templateCache });
     $http.get('templates/recentnotes.html', { cache: $templateCache });
-    //$http.get('templates/viewpatient.html', { cache: $templateCache });
-    //$http.get('templates/menu.html', { cache: $templateCache });
-    //$http.get('templates/accounts.html', { cache: $templateCache });
-    //$http.get('templates/addaccount.html', { cache: $templateCache }); 
-    //$http.get('templates/addpatient.html', { cache: $templateCache });
+    $http.get('templates/allnotes.html', { cache: $templateCache });
+    $http.get('templates/menu.html', { cache: $templateCache });
+    $http.get('templates/loader.html', { cache: $templateCache });
+    $http.get('templates/newnote.html', { cache: $templateCache });
 });
 
 noteMiner.config(function ($stateProvider, $urlRouterProvider) {
@@ -42,84 +41,25 @@ noteMiner.config(function ($stateProvider, $urlRouterProvider) {
             }
 
         })
-        .state('app.search', {
-            url: '/search',
+        .state('app.newnote', {
+            url: '/newnote',
             views: {
                 'menuContent': {
-                    templateUrl: 'templates/search.html'
+                    controller: "newnoteController",
+                    templateUrl: 'templates/newnote.html'
                 }
             }
         })
 
-        .state('app.browse', {
-            url: '/browse',
+        .state('app.allnotes', {
+            url: '/allnotes',
             views: {
                 'menuContent': {
-                    templateUrl: 'templates/browse.html'
+                    controller: "allnotesController",
+                    templateUrl: 'templates/allnotes.html'
                 }
             }
         })
-
-    //.state('recentnotes', {
-    //    url: '/recentnotes',
-    //    controller: "recentnotesController",
-    //    templateUrl: 'templates/recentnotes.html'
-    //})
-
-
-    //  .state('app.playlists', {
-    //      url: '/playlists',
-    //      views: {
-    //          'menuContent': {
-    //              templateUrl: 'templates/playlists.html',
-    //              controller: 'PlaylistsCtrl'
-    //          }
-    //      }
-    //  })
-
-    //.state('app.single', {
-    //    url: '/playlists/:playlistId',
-    //    views: {
-    //        'menuContent': {
-    //            templateUrl: 'templates/playlist.html',
-    //            controller: 'PlaylistCtrl'
-    //        }
-    //    }
-    //});
-    //  // if none of the above states are matched, use this as the fallback
-    //  $urlRouterProvider.otherwise('/app/playlists');
-
-    //.state('recentnotes', {
-    //    url: '/recentnotes',
-    //    controller: "recentnotesController",
-    //    templateUrl: 'templates/recentnotes.html'
-    //})
-    //.state('viewpatient', {
-    //    url: '/viewpatient',
-    //    controller: "viewpatientController",
-    //    templateUrl: 'templates/viewpatient.html'
-    //})
-    //.state('menu', {
-    //    url: '/menu',
-    //    controller: "menuController",
-    //    templateUrl: 'templates/menu.html'
-    //})
-    //.state('accounts', {
-    //    url: '/accounts',
-    //    controller: "accountsController",
-    //    templateUrl: 'templates/accounts.html'
-    //})
-    // .state('addaccount', {
-    //     url: '/addaccount',
-    //     controller: "addaccountController",
-    //     templateUrl: 'templates/addaccount.html'
-    // })
-    //.state('addpatient', {
-    //    url: '/addpatient',
-    //    controller: "addpatientController",
-    //    templateUrl: 'templates/addpatient.html'
-    //})
-
     ;
 
 })

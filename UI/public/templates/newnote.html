@@ -1,0 +1,48 @@
+﻿<div ng-hide="showMenu" class="col-10 responsive-sm responsive-md sideMenu adjustSideMenu">
+    <div class="cursorPointer" ng-click="toggleLeftSideMenu()">
+        <button class="button button-icon icon ion-drag button-block light"></button>
+    </div>
+    <hr class="hrDivider" />
+
+    <button class="button button-icon icon ion-plus-round button-block light" ng-click="newMap()"></button>
+</div>
+<ion-content>
+
+    <ion-scroll direction="y">
+        <div class="view-container">
+            <div class="row row-top">
+                <div ng-hide="showMenu" class="col-10 responsive-sm responsive-md">
+                    <!--empty area to keep the menu space-->
+                </div>
+                <div class="col">
+                    <div class="row row-center">
+                        <div class="col-offset-50 dvOffset50"></div>
+                        <div class="col">
+                            <label class="item item-input">
+                                <input type="text">
+                            </label>
+                        </div>
+                        <div class="col">
+                            <a ng-click="searchNotes()" class="button icon-right ion-search button-block button-calm text-left btnSearch">Search</a>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div ng-show="showMap" class="padding text-center">
+                        <img class="full-image" src="../images/noteexample.png" />
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </ion-scroll>
+
+    <div class="row row-center dvButtons">
+        <div class="col-50"></div>
+        <div class="col-50 text-right">
+            <button class="button button-float"><i class="icon ion-arrow-graph-down-right"></i></button>
+
+            <button class="button button-float"><i class="icon ion-arrow-right-c"></i></button>
+        </div>
+    </div>
+</ion-content>
+
