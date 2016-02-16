@@ -167,17 +167,16 @@ ion-nav-bar.bar-stable.nav-bar-container {
     text-align: left;
     white-space: nowrap;
     overflow: hidden !important;
-    text-overflow: ellipsis;
 }
 
 .dvNoteImg {
     border: 2px solid #bcb7b7;
-    height: 120px !important;
+    height: 180px !important;
 }
 
 @media (max-width: 767px) {
     .dvNoteImg {
-        height: initial !important;
+        height: 180px !important;
     }
 
     .adjustSideMenu .button-icon .icon:before,

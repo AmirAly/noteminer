@@ -7,4 +7,9 @@
     $scope.showMapDetails = function () {
         $state.go('app.newnote');
     }
+    $(".noteFlip").flip({
+        axis: "y",
+        reverse: true,
+        trigger: "click"
+    });
 });

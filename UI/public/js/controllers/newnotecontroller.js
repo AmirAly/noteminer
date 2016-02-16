@@ -11,7 +11,8 @@
             });
             $timeout(function () {
                 $ionicLoading.hide();
-                $scope.showMap = true;
+                //$scope.showMap = true;
+                DrawMap();
             }, 3000);
             searchCounter++;
         }
@@ -40,7 +41,8 @@
         });
         $timeout(function () {
             $ionicLoading.hide();
-            $scope.showMap = true;
+            //$scope.showMap = true;
+            DrawMap();
         }, 3000);
         searchCounter++;
     }
@@ -60,8 +62,13 @@
     $scope.cancelNewNote = function () {
         $scope.modal.hide();
     }
+    $scope.newNoteTxt = '';
     $scope.saveNewNote = function () {
         $scope.modal.hide();
+        nodes.add({ id: counter, label: $('#newNoteTxt').val().substring(0,7) });
+        edges.add({ from: 1, to: counter });
+        //network = new vis.Network(container, data, options);
+        counter++;
     }
 
     $scope.showSaveCurrentNoteModal = function () {
@@ -82,24 +89,36 @@
     $scope.saveCurrentNote = function () {
         $scope.modal.hide();
     }
+    var counter = 6;
+    var edges = new vis.DataSet([
+          { from: 1, to: 3 },
+          { from: 1, to: 2 },
+          { from: 2, to: 4 },
+          { from: 2, to: 5 }
+    ]);
+    var nodes = new vis.DataSet([
+  { id: 1, label: 'Spanish' },
+  { id: 2, label: 'Sound cloud ..' },
+  { id: 3, label: 'Skype' },
+  { id: 4, label: 'Node 4' },
+  { id: 5, label: 'Node 5' }
+    ]);
+    var network
+    function DrawMap() {
+        // create an array with edges
+        
 
-    //$scope.openModal = function () {
-    //    $scope.modal.show();
-    //};
-    //$scope.closeModal = function () {
-    //    $scope.modal.hide();
-    //};
-    ////Cleanup the modal when we're done with it!
-    //$scope.$on('$destroy', function () {
-    //    $scope.modal.remove();
-    //});
-    //// Execute action on hide modal
-    //$scope.$on('modal.hidden', function () {
-    //    // Execute action
-    //});
-    //// Execute action on remove modal
-    //$scope.$on('modal.removed', function () {
-    //    // Execute action
-    //});
+        // create a network
+        var container = document.getElementById('graphDiv');
+        var data = {
+            nodes: nodes,
+            edges: edges
+        };
+        var options = {
+            width: '100%',
+            height: '800px'
+        };
+        network = new vis.Network(container, data, options);
+    }
 
 });
