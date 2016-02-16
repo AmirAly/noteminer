@@ -20,20 +20,26 @@
                         </div>
 
                         <div class="col-75 padding-horizontal">
-                            <form ng-submit="search()">
                                 <label class="item-input padding-horizontal">
-                                    <input type="text" class="text-right txtSearch" placeholder="Type to filter">
+                                    <input type="text" class="text-right txtSearch" onkeyup="filter()" id="txtSearchMap" placeholder="Type to filter">
                                 </label>
-                            </form>
-                            
                         </div>
                     </div>
 
-                    <div class="row text-center row-baseline">
-                        <div class="col col-25">
+                    <div class="row">
+                        <div class="col">
+                            <div id="dvNoResult" class="hide text-center padding">
+                                <h3 class="padding">No result found</h3>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row text-center row-center responsive-sm">
+                        
+                        <div class="col col-25 filterable" ng-click="showMapDetails()">
                             <div class=" text-center">
                                 <div>
-                                    <img src="images/map1.png" class="dvNoteImg padding full-image row-stretch" />
+                                    <img src="images/map1.png" class="dvNoteImg padding full-image" />
                                 </div>
                                 <div class="dvNoteName padding-left">
                                     <span class="padding-left">Note 1</span>
@@ -41,17 +47,18 @@
                             </div>
                         </div>
 
-                        <div class="col col-25">
+                        <div class="col col-25 filterable" ng-click="showMapDetails()">
                             <div class=" text-center">
-                                <div><img src="images/map2.png" class="dvNoteImg padding full-image row-stretch" /></div>
+                                <div><img src="images/map2.png" class="dvNoteImg padding full-image" /></div>
                                 <div class="dvNoteName padding-left">
                                     <span class="padding-left">My Note About Note template 1</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="col col-25">
+
+                        <div class="col col-25 filterable" ng-click="showMapDetails()">
                             <div class=" text-center">
-                                <div><img src="images/map3.png" class="dvNoteImg padding full-image row-stretch" /></div>
+                                <div><img src="images/map3.png" class="dvNoteImg padding full-image" /></div>
                                 <div class="dvNoteName padding-left">
                                     <span class="padding-left">My Note About Note template 2</span>
                                 </div>

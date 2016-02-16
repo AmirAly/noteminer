@@ -4,5 +4,7 @@
     $scope.allMaps = function () {
         $state.go('app.allnotes');
     }
-    
+    $scope.showMapDetails = function () {
+        $state.go('app.newnote');
+    }
 });

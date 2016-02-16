@@ -25,8 +25,21 @@
 
                 </div>
                 <hr class="hrDivider" />
+                <!--menu content-->
                 <div class="padding">
-                    <button menu-close ng-click="newMap()" class="button button-icon icon ion-plus-round button-block light"><span class="h3 padding">&nbsp;New Map</span></button>
+                    <button menu-close ng-click="newMap()" class="button button-icon icon ion-plus-round button-block light text-left">
+                    <span class="h4 padding">&nbsp;New Map</span>
+                    </button>
+                </div>
+                <div class="padding">
+                    <button menu-close ng-click="recentMaps()" class="button button-icon icon ion-ios-copy-outline button-block light text-left">
+                        <span class="h4 padding">&nbsp;My Maps</span>
+                    </button>
+                </div>
+                <div class="padding">
+                    <button menu-close ng-click="logout()" class="button button-icon icon ion-log-out button-block light text-left">
+                        <span class="h4 padding">&nbsp;Logout</span>
+                    </button>
                 </div>
             </div>
             <!--<ion-list>

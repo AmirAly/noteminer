@@ -20,4 +20,11 @@
     $scope.newMap = function () {
         $state.go('app.newnote');
     }
+    $scope.recentMaps = function () {
+        $state.go('app.recentnotes');
+    }
+    $scope.logout = function () {
+        $state.go('login');
+    }
+
 });

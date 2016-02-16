@@ -6,7 +6,32 @@
 
     <button class="button button-icon icon ion-plus-round button-block light" ng-click="newMap()"></button>
 </div>
-<ion-content>
+<div class="bar bar-header bar-calm item-input-inset">
+
+    <div class="row row-center">
+        <div class="col-offset-10 "></div>
+        <div class="col">
+            <button ng-click="showAddNoteModal()" class="button icon ion-document-text button-stable"></button>
+        </div>
+        <div class="col">
+            <button ng-click="showSaveCurrentNoteModal()" class="button ion-checkmark-round button-light"></button>
+        </div>
+        <div class="row row-center">
+            <div class="col-66 padding-horizontal">
+                <label class="item-input-wrapper">
+                    <input type="search" placeholder="Search" class="txtSearch">
+                </label>
+            </div>
+
+            <div class="col-33">
+                <button ng-click="searchNotes()" class="button icon-right ion-search button-light text-left"><span class="dvExtraOffset">Search</span></button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<ion-content class="has-header ">
 
     <ion-scroll direction="y">
         <div class="view-container">
@@ -14,35 +39,112 @@
                 <div ng-hide="showMenu" class="col-10 responsive-sm responsive-md">
                     <!--empty area to keep the menu space-->
                 </div>
+                <!--page content-->
                 <div class="col">
-                    <div class="row row-center">
-                        <div class="col-offset-50 dvOffset50"></div>
-                        <div class="col">
-                            <label class="item item-input">
-                                <input type="text">
-                            </label>
-                        </div>
-                        <div class="col">
-                            <a ng-click="searchNotes()" class="button icon-right ion-search button-block button-calm text-left btnSearch">Search</a>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
+
                     <div ng-show="showMap" class="padding text-center">
                         <img class="full-image" src="../images/noteexample.png" />
                     </div>
-                    
+
                 </div>
             </div>
         </div>
+
     </ion-scroll>
 
-    <div class="row row-center dvButtons padding-horizontal">
-        <div class="col-50"></div>
-        <div class="col-50 text-right padding-horizontal">
-            <button class="button button-float"><i class="icon ion-arrow-graph-down-right"></i></button>
 
-            <button class="button button-float"><i class="icon ion-arrow-right-c"></i></button>
-        </div>
-    </div>
 </ion-content>
 
+
+<script id="addNote.html" type="text/ng-template">
+    <ion-modal-view>
+        <ion-header-bar>
+            <h1 class="title">Add new Note</h1>
+        </ion-header-bar>
+        <ion-content>
+            <div class="view-container padding">
+                <div class="list ">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Add your note</span>
+                        <textarea rows="5" ></textarea>
+                    </label>
+                </div>
+            </div>
+        </ion-content>
+        <div class="bar bar-footer item-input-inset bar-stable">
+            <div class="col text-right">
+                <button ng-click="cancelNewNote()" class="button button-stable button-large ">
+                    <span>Cancel</span>
+                </button>
+                <button ng-click="saveNewNote()" class="button button-positive button-large">
+                    <span>Save</span>
+                </button>
+            </div>
+        </div>
+    </ion-modal-view>
+</script>
+
+<script id="confirmSave.html" type="text/ng-template">
+    <ion-modal-view>
+        <ion-header-bar>
+            <h1 class="title">Save Confirmation</h1>
+        </ion-header-bar>
+        <ion-content>
+            <div class="view-container padding">
+                <div class="list ">
+                    
+
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Title</span>
+                        <input type="text">
+                    </label>
+
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Description</span>
+                        <textarea rows="5" ></textarea>
+                    </label>
+
+                   
+                </div>
+            </div>
+            
+        </ion-content>
+        <div class="bar bar-footer item-input-inset bar-stable">
+            <div class="col text-right">
+                <button ng-click="cancelSaveNote()" class="button button-stable button-large ">
+                    <span>Cancel</span>
+                </button>
+                <button ng-click="saveCurrentNote()" class="button button-positive button-large">
+                    <span>Save</span>
+                </button>
+            </div>
+        </div>
+    </ion-modal-view>
+</script>
+
+<script id="searchModal.html" type="text/ng-template">
+    <ion-modal-view>
+        <ion-header-bar>
+            <h1 class="title">Save Confirmation</h1>
+        </ion-header-bar>
+        <ion-content>
+            <div class="view-container padding">
+                <div class="list ">
+                    <label class="item item-input item-borderless">
+                        <span class="h3 txtSearchconfirmation">Do you want to discard current map and build new one?</span>
+                    </label>
+                </div>
+            </div>
+        </ion-content>
+        <div class="bar bar-footer item-input-inset bar-stable">
+            <div class="col text-right">
+                <button ng-click="cancelSearch()" class="button button-stable button-large ">
+                    <span>Cancel</span>
+                </button>
+                <button ng-click="search()" class="button button-positive button-large">
+                    <span>Search</span>
+                </button>
+            </div>
+        </div>
+    </ion-modal-view>
+</script>
