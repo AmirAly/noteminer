@@ -1,0 +1,206 @@
+
+/*general*/
+
+ion-scroll[direction=y] {
+    /*height: calc(100vh - 33px - 33px  - 15px);*/
+    height: 100vh;
+}
+
+/*target firefox only*/
+@-moz-document url-prefix() {
+    ion-scroll[direction=y] {
+        overflow-y: scroll !important;
+    }
+}
+
+
+.text-left {
+    text-align: left !important;
+}
+
+.sideMenu {
+    background-color: #116392;
+    color: #fff;
+    height: 100vh;
+}
+
+.adjustSideMenu {
+    position: absolute;
+    display: block;
+    z-index: 99999;
+}
+
+    .adjustSideMenu .button-icon:hover {
+        color: #fff !important;
+    }
+
+h1, h2, h3, h4, h5, h6 {
+    color: #116392;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    color: #fff;
+}
+
+
+ion-nav-bar.bar-stable.nav-bar-container {
+    visibility: hidden;
+}
+
+.scroll-view {
+    margin-top: 0;
+}
+
+.scroll-content {
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.hrDivider {
+    height: 3px;
+    background-color: #fff;
+    border: 0;
+}
+
+
+.pageHeader {
+    position: relative;
+    padding-bottom: 0;
+    margin: 20px 0;
+    border-bottom: 2px solid #116392;
+}
+
+    .pageHeader:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background-color: #116392;
+    }
+
+    .pageHeader:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 0;
+        border-bottom: 2px solid #116392;
+    }
+
+
+.clear {
+    float: left;
+    width: 100%;
+    height: 30px;
+}
+
+
+.cursorPointer {
+    cursor: pointer;
+}
+
+.loading-container .loading {
+    background-color: #fff !important;
+}
+
+    .loading-container .loading h3 {
+        color: #116392 !important;
+    }
+
+
+/*login page*/
+
+.loginPage .loginBackground {
+    background: url(../images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.loginPage .loginfooter {
+    background-color: #6d8687;
+    color: #fff;
+    font-size: 18px;
+}
+
+    .loginPage .loginfooter a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+        .loginPage .loginfooter a:active {
+            color: #fff;
+            text-decoration: none;
+        }
+
+.loginPage h1,
+.loginPage h2,
+.loginPage h3,
+.loginPage h4,
+.loginPage h5,
+.loginPage h6 {
+    color: #fff;
+    line-height: 1.3;
+}
+
+@media (max-width: 767px) {
+    .loginPage .loginBackground {
+        background: url(../images/background3.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .dvExtraOffset {
+        display: none !important;
+    }
+}
+
+/*recent notes & all notes*/
+
+.dvNoteName {
+    font-size: 16px;
+    color: #5e5f5f;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden !important;
+}
+
+.dvNoteImg {
+    border: 2px solid #bcb7b7;
+    height: 180px !important;
+}
+
+@media (max-width: 767px) {
+    .dvNoteImg {
+        height: 180px !important;
+    }
+
+    .adjustSideMenu .button-icon .icon:before,
+    .adjustSideMenu .button-icon.icon:before {
+        font-size: 20px;
+    }
+}
+
+.dvNotesGallary {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.adjustGallaryItem {
+    margin-bottom: 3%;
+}
+
+
+.txtSearch {
+    font-size: 18px !important;
+}
+
+/*note*/
+.txtSearchconfirmation {
+    color: #000;
+    white-space: normal;
+}

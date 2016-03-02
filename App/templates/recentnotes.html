@@ -1,0 +1,92 @@
+﻿<ion-content>
+    <div ng-hide="showMenu" class="col-10 responsive-sm responsive-md sideMenu adjustSideMenu">
+        <div class=" cursorPointer" ng-click="toggleLeftSideMenu()">
+            <button class="button button-icon icon ion-drag button-block light"></button>
+        </div>
+        <hr class="hrDivider" />
+
+        <button class="button button-icon icon ion-plus-round button-block light" ng-click="newMap()"></button>
+    </div>
+    <ion-scroll direction="y">
+        <div class="view-container has-header">
+            <div class="row">
+                <div ng-hide="showMenu" class="col-10 responsive-sm responsive-md">
+                    <!--empty area to keep the menu space-->
+                </div>
+                <div class="col padding">
+                    <div class="pageHeader row row-bottom">
+                        <div class="col">
+                            <h1>Recent</h1>
+                        </div>
+                    </div>
+
+                    <div class="row text-center row-center responsive-md">
+                        <div class="col col-25 " style="height:200px">
+                            <div class=" text-center noteFlip">
+                                <div class="front">
+                                    <div>
+                                        <img src="images/map1.png" class="dvNoteImg full-image" />
+                                    </div>
+                                    <div class="dvNoteName padding-left">
+                                        <span class="padding-left">Note 1</span>
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <p>I created this note to see how much progress i made with leaening Spanish <a class="button button-block" ng-click="showMapDetails()"> View</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-25 " style="height:200px">
+                            <div class=" text-center noteFlip">
+                                <div class="front">
+                                    <div>
+                                        <img src="images/map3.png" class="dvNoteImg  full-image" />
+                                    </div>
+                                    <div class="dvNoteName padding-left">
+                                        <span class="padding-left">Note 1</span>
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <p>I created this note to see how much progress i made with leaening Spanish <a class="button button-block" ng-click="showMapDetails()"> View</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-25 " style="height:200px">
+                            <div class="text-center noteFlip">
+                                <div class="front">
+                                    <div>
+                                        <img src="images/map1.png" class="dvNoteImg full-image" />
+                                    </div>
+                                    <div class="dvNoteName padding-left">
+                                        <span class="padding-left">Note 1</span>
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <p>I created this note to see how much progress i made with leaening Spanish <a class="button button-block" ng-click="showMapDetails()"> View</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clear"></div>
+                    <div class="clear"></div>
+                    <div class="clear"></div>
+                    <div class="clear"></div>
+                    <div class="clear"></div>
+                    <div class="clear"></div>
+                    <div class="clear"></div>
+                    <div class="clear"></div>
+
+                    <div class="row responsive-md responsive-sm">
+                        <div class="col-66"></div>
+                        <div class="col-33">
+                            <h3 class="text-center cursorPointer" ng-click="allMaps()">View All</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-scroll>
+</ion-content>
+
+

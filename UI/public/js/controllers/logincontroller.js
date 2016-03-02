@@ -1,7 +1,6 @@
 ﻿noteMiner.controller("LoginController", function ($scope, $state) {
-
     $scope.login = function () {
-        $state.go('app.recentnotes');
+        $state.go('app.newnote');
     }
 });
 

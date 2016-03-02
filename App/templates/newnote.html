@@ -19,12 +19,12 @@
         <div class="row row-center">
             <div class="col-66 padding-horizontal">
                 <label class="item-input-wrapper">
-                    <input type="search" placeholder="Search" class="txtSearch">
+                    <input type="search" placeholder="Search" class="txtSearch" ng-model="keyword">
                 </label>
             </div>
 
             <div class="col-33">
-                <button ng-click="searchNotes()" class="button icon-right ion-search button-light text-left"><span class="dvExtraOffset">Search</span></button>
+                <button ng-click="search()" class="button icon-right ion-search button-light text-left"><span class="dvExtraOffset">Search</span></button>
             </div>
         </div>
 
@@ -121,17 +121,9 @@
 <script id="NoteView.html" type="text/ng-template">
     <ion-modal-view>
         <ion-header-bar>
-            <h1 class="title">Car fix</h1>
+            <h1 class="title">{{NoteTitle}}</h1>
         </ion-header-bar>
-        <ion-content>
-            <div class="view-container padding">
-                <h3>I should check all of this by end of Feb</h3>
-                <ul>
-                    <li>New tires</li>
-                    <li>Check oil levels</li>
-                    <li>Know why there is a waterlake</li>
-                </ul>
-            </div>
+        <ion-content style="padding:10px;" ng-bind-html="NoteBody">
 
         </ion-content>
         <div class="bar bar-footer item-input-inset bar-stable">
