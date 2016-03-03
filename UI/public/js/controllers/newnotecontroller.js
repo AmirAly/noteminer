@@ -1,4 +1,18 @@
-﻿noteMiner.controller("newnoteController", function ($scope, $state, $ionicLoading, $ionicModal, $timeout) {
+﻿noteMiner.controller("newnoteController", function ($scope, $state, $ionicLoading, $ionicModal, $timeout, $ionicPopover) {
+
+    $ionicPopover.fromTemplateUrl('templates/export.html', {
+        scope: $scope,
+    }).then(function (popover) {
+        $scope.popover = popover;
+    });
+
+    $scope.exportPNG = function () {
+        $scope.popover.hide();
+    }
+
+    $scope.exportCSV = function () {
+        $scope.popover.hide();
+    }
 
     $scope.text = 'newnoteController';
     var searchCounter = 0;

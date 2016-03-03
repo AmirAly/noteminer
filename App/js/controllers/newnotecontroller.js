@@ -1,9 +1,25 @@
-﻿noteMiner.controller("newnoteController", function ($scope, $state, $ionicLoading, $ionicModal, $timeout) {
+﻿noteMiner.controller("newnoteController", function ($scope, $state, $ionicLoading, $ionicModal, $timeout, $ionicPopover) {
+
+    $ionicPopover.fromTemplateUrl('templates/export.html', {
+        scope: $scope,
+    }).then(function (popover) {
+        $scope.popover = popover;
+    });
+
+    $scope.exportPNG = function () {
+        $scope.popover.hide();
+    }
+
+    $scope.exportCSV = function () {
+        $scope.popover.hide();
+    }
+
+
     var _token = localStorage.getItem('token');
     if (_token && _token != null && _token.length > 0) {
     }
     else {
-        $state.go('app.login');
+        //$state.go('app.login');
     }
     $scope.text = 'newnoteController';
     var searchCounter = 0;

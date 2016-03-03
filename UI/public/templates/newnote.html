@@ -16,21 +16,33 @@
         <div class="col">
             <button ng-click="showSaveCurrentNoteModal()" class="button ion-checkmark-round button-light"></button>
         </div>
-        <div class="row row-center">
-            <div class="col-66 padding-horizontal">
-                <label class="item-input-wrapper">
-                    <input type="search" placeholder="Search" class="txtSearch">
-                </label>
-            </div>
-
-            <div class="col-33">
-                <button ng-click="searchNotes()" class="button icon-right ion-search button-light text-left"><span class="dvExtraOffset">Search</span></button>
+        <div class="col-50">
+            <div class="row row-center">
+                <div class="col-66 padding-horizontal">
+                    <label class="item-input-wrapper">
+                        <input type="search" placeholder="Search" class="txtSearch">
+                    </label>
+                </div>
+                <div class="col-33">
+                    <button ng-click="searchNotes()" class="button icon-right ion-search button-light text-left"><span class="dvExtraOffset">Search &nbsp;</span></button>
+                </div>
             </div>
         </div>
-
+        <div class="col">
+            <!--<select title="Export">
+                <option>Export PNG</option>
+                <option>Export CSV</option>
+            </select>-->
+            <div class="buttons">
+                <!--<button class="button button-icon ion-android-download" ng-click="popover.show($event)"></button>-->
+                <button ng-click="popover.show($event)" class=" button icon-right ion-android-download button-light text-left"><span class="dvExtraOffset">Export&nbsp;</span></button>
+            </div>
+        </div>
     </div>
 
 </div>
+
+
 <ion-content class="has-header ">
 
     <ion-scroll direction="y">
@@ -168,4 +180,19 @@
             </div>
         </div>
     </ion-modal-view>
+</script>
+
+<script id="templates/export.html" type="text/ng-template">
+    <ion-popover-view class="fit">
+        <ion-content>
+            <div class="list">
+                <a class="item" href="" ng-click="exportCSV()">
+                    Export CSV
+                </a>
+                <a class="item" href="" ng-click="exportPNG()">
+                    Export PNG
+                </a>
+            </div>
+        </ion-content>
+    </ion-popover-view>
 </script>

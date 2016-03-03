@@ -24,6 +24,14 @@ ion-scroll[direction=y] {
     height: 100vh;
 }
 
+    .sideMenu img {
+        max-width: 40px;
+        max-height: 40px;
+        width: 100%;
+        border-radius: 50%;
+        vertical-align: middle;
+    }
+
 .adjustSideMenu {
     position: absolute;
     display: block;
@@ -204,3 +212,11 @@ ion-nav-bar.bar-stable.nav-bar-container {
     color: #000;
     white-space: normal;
 }
+
+ion-popover-view.fit {
+    height: auto !important;
+}
+
+    ion-popover-view.fit ion-content {
+        position: relative !important;
+    }
