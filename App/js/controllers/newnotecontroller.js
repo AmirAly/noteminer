@@ -19,7 +19,7 @@
     if (_token && _token != null && _token.length > 0) {
     }
     else {
-        //$state.go('app.login');
+        $state.go('app.login');
     }
     $scope.text = 'newnoteController';
     var searchCounter = 0;
