@@ -1,6 +1,7 @@
 ﻿
-noteMiner.controller("LoginController", function ($scope, $state) {
+noteMiner.controller("LoginController", function ($scope, $state,_util) {
     localStorage.clear();
+	_util.checkServices('Testing');
     WL.init({
         client_id: '0000000048188A8C',
         redirect_uri: 'http://amirnoteapi.com/callback.html',
